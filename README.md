@@ -12,8 +12,7 @@ http://symfony.com/doc/current/frontend/encore/simple-example.html
 ```
 
 
-
- ./node_modules/.bin/encore dev
+./node_modules/.bin/encore dev
 
 
  ./node_modules/.bin/encore dev --watch
