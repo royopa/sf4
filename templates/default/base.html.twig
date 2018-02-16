@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="" lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        {% block stylesheets %}
+            {% embed 'default/stylesheets.html.twig' %}{% endembed %}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block navbar %}
+            {% embed 'default/navbar.html.twig' %}{% endembed %}
+        {% endblock %}
+
+        <main role="main" class="container">
+        {% block content %}
+                {% embed 'index.html.twig' %}{% endembed %}
+        {% endblock %}
+
+        {% block flashMessages %}
+          {% embed 'default/flashMessages.html.twig' %}{% endembed %}
+        {% endblock %}
+
+        {% block footer %}
+          {% embed 'default/footer.html.twig' %}{% endembed %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% embed 'default/javascripts.html.twig' %}{% endembed %}
+        {% endblock %}
+        </main>
+    </body>
+</html>
