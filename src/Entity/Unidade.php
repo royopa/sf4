@@ -17,7 +17,6 @@ class Unidade
      *
      * @ORM\Column(name="CO_UNIDADE", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      * 
      */
     private $id;

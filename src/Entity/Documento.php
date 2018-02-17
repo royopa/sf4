@@ -588,30 +588,6 @@ class Documento
     }
 
     /**
-     * Gets the getProdutosVinculados
-     *
-     * @return \Doctrine\Common\Collections\ArrayCollection
-     */
-    public function getProdutosVinculados()
-    {
-        return $this->produtosVinculados;
-    }
-
-    /**
-     * Sets the getProdutosVinculados
-     *
-     * @param \Doctrine\Common\Collections\ArrayCollection $produtosVinculados the produtos vinculados
-     *
-     * @return self
-     */
-    public function setProdutosVinculados(\Doctrine\Common\Collections\ArrayCollection $produtosVinculados)
-    {
-        $this->produtosVinculados = $produtosVinculados;
-
-        return $this;
-    }
-
-    /**
      * Sets the value of filename.
      *
      * @param string $filename $filename the filename
@@ -655,54 +631,6 @@ class Documento
     public function setIsConcluido($isConcluido)
     {
         $this->isConcluido = $isConcluido;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of isVotoContra.
-     *
-     * @return boolean
-     */
-    public function getIsVotoContra()
-    {
-        return $this->isVotoContra;
-    }
-
-    /**
-     * Sets the value of isVotoContra.
-     *
-     * @param boolean $isVotoContra the is voto contra
-     *
-     * @return self
-     */
-    public function setIsVotoContra($isVotoContra)
-    {
-        $this->isVotoContra = $isVotoContra;
-
-        return $this;
-    }
-
-    /**
-     * Gets the joinColumns={@ORM\JoinColumn(name="CO_DOC", referencedColumnName="CO_DOC")},
-     *
-     * @return \Doctrine\Common\Collections\ArrayCollection
-     */
-    public function getParticipantesContra()
-    {
-        return $this->participantesContra;
-    }
-
-    /**
-     * Sets the joinColumns={@ORM\JoinColumn(name="CO_DOC", referencedColumnName="CO_DOC")},
-     *
-     * @param \Doctrine\Common\Collections\ArrayCollection $participantesContra the participantes contra
-     *
-     * @return self
-     */
-    public function setParticipantesContra(\Doctrine\Common\Collections\ArrayCollection $participantesContra)
-    {
-        $this->participantesContra = $participantesContra;
 
         return $this;
     }
@@ -768,29 +696,5 @@ class Documento
         $nomeUnico = $this->getComite()->getId().'_'.$this->id.'_'.$nomeUnico;
 
         return $nomeUnico;
-    }
-
-    /**
-     * Gets the value of projeto.
-     *
-     * @return string
-     */
-    public function getProjeto()
-    {
-        return $this->projeto;
-    }
-
-    /**
-     * Sets the value of projeto.
-     *
-     * @param string $projeto the projeto
-     *
-     * @return self
-     */
-    public function setProjeto($projeto)
-    {
-        $this->projeto = $projeto;
-
-        return $this;
     }
 }
